@@ -2,6 +2,7 @@ const container = document.createElement('div');
       document.body.appendChild(container);
       container.classList.add('container');
 
+
 for (i = 0; i < 16; i++) {
     
     var divRow = document.createElement('div');
@@ -16,3 +17,7 @@ for (i = 0; i < 16; i++) {
     }
 }
 
+function changeClass(elemName) {
+    elemName.classList.remove('divColumn')
+    elemName.classList.add('hoveredColumn')
+}
