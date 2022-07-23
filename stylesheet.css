@@ -1,0 +1,15 @@
+.divRow, .divColumn {
+    
+}
+
+.divRow {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.divColumn {
+    border: solid blueviolet 1px;
+    height: 20px;
+    width: 20px;
+    gap: 1.5px;
+}
