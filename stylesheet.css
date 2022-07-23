@@ -1,3 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn {
+    align-self: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .divRow, .divColumn {
     
 }
@@ -8,7 +24,7 @@
 }
 
 .divColumn {
-    border: solid blueviolet 1px;
+    border: solid rgb(252, 113, 136) 1px;
     height: 20px;
     width: 20px;
     gap: 1.5px;
