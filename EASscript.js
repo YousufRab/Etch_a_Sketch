@@ -14,10 +14,21 @@ for (i = 0; i < 16; i++) {
         var divColumn = document.createElement('div');
         divRow.appendChild(divColumn);
         divColumn.classList.add('divColumn');
+        divColumn.setAttribute('id', `${i}${j}`);
     }
 }
 
-function changeClass(elemName) {
-    elemName.classList.remove('divColumn')
-    elemName.classList.add('hoveredColumn')
+function changeClass(elemId) {
+    const box = document.getElementById(elemId);
+    box.classList.remove('divColumn');
+    box.classList.add('hoveredColumn');
 }
+
+const grids = document.querySelectorAll('.divColumn');
+
+grids.forEach(() => addEventListener('mouseover', () => {
+    changeClass()
+}));
+
+
+

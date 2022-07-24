@@ -19,7 +19,7 @@ body {
 }
 
 .divColumn {
-    border: solid rgb(252, 113, 136) 1px;
+    border: solid rgb(255, 18, 18) 1px;
     height: 20px;
     width: 20px;
     transition: 0.3s;
