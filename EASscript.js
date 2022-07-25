@@ -14,7 +14,7 @@ for (i = 0; i < 16; i++) {
         var divColumn = document.createElement('div');
         divRow.appendChild(divColumn);
         divColumn.classList.add('divColumn');
-        divColumn.setAttribute('id', `${i}${j}`);
+        divColumn.setAttribute('id', `${i}${i}${j}`);
     }
 }
 

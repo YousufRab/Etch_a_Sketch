@@ -2,10 +2,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgb(96, 38, 161);
 }
 
 #btn {
     align-self: center;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
 .container {
