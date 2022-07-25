@@ -20,12 +20,20 @@ body {
     border-radius: 8px;
 }
 
+#btn:active {
+    background-color: white;
+    color: rgb(96, 38, 161);
+}
+
 .container {
     display: flex;
     flex-direction: column;
     max-width: 352px;
     max-height: 352px;
     align-self: center;
+    min-width: 352px;
+    min-height: 352px;
+    flex-shrink: 0;
 }
 
 .divRow {
