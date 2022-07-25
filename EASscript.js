@@ -2,6 +2,11 @@ const container = document.createElement('div');
 document.body.appendChild(container);
 container.classList.add('container');
 
+function userInput() {
+    numGrids = prompt("How many boxes would you like?: ");
+}
+
+
 
 for (i = 0; i < 16; i++) {
 
