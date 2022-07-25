@@ -14,6 +14,10 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-family: 'Roboto Mono', monospace, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: solid 4px white;
+    border-radius: 8px;
 }
 
 .container {
