@@ -23,6 +23,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    max-width: 352px;
+    max-height: 352px;
+    align-self: center;
 }
 
 .divRow {
