@@ -15,6 +15,27 @@ function removeGrid() {
     grids.forEach((grid) => grid.remove());
 }
 
+function genGrid(numGrids) {
+    if (numGrids > 100) {
+        alert("Sorry number of boxes can't be more than 100");
+    } else {
+        for (i = 0; i < numGrids; i++) {
+
+            var divRow = document.createElement('div');
+            container.appendChild(divRow);
+            divRow.classList.add('divRow');
+        
+            for (j = 0; j < numGrids; j++) {
+        
+                var divColumn = document.createElement('div');
+                divRow.appendChild(divColumn);
+                divColumn.classList.add('divColumn');
+                divColumn.setAttribute('id', `${i}${i}${j}`);
+            }
+        }
+    }
+}
+
 
 for (i = 0; i < 16; i++) {
 
