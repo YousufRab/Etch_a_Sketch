@@ -2,10 +2,26 @@ const container = document.createElement('div');
 document.body.appendChild(container);
 container.classList.add('container');
 
+const grids = document.querySelectorAll('.divColumn');
+
+// addEventListener is a method on the HTML Element so it needs to be accessed using dot notation. 
+// The callback receives "event" as a parameter which contains lots of info about the user interaction
+// event.target gets you to the HTML element that was interacted, it has an "id" property which can
+// be passed to changeClass()
+grids.forEach((grid) => grid.addEventListener('mouseover', (event) => {
+    changeClass(event.target.id);
+}));
+
 function userInput() {
-    numGrids = prompt("How many boxes would you like?: ");
+    removeGrid();
+    var numGrids = prompt("How many boxes would you like?: ");
+    return numGrids;
 }
 
+function removeGrid() {
+    const grids = document.querySelectorAll('.divColumn');
+    grids.forEach((grid) => grid.remove());
+}
 
 
 for (i = 0; i < 16; i++) {
@@ -29,15 +45,7 @@ function changeClass(elemId) {
     box.classList.add('hoveredColumn');
 }
 
-const grids = document.querySelectorAll('.divColumn');
 
-// addEventListener is a method on the HTML Element so it needs to be accessed using dot notation. 
-// The callback receives "event" as a parameter which contains lots of info about the user interaction
-// event.target gets you to the HTML element that was interacted, it has an "id" property which can
-// be passed to changeClass()
-grids.forEach((grid) => grid.addEventListener('mouseover', (event) => {
-    changeClass(event.target.id);
-}));
 
 
 
