@@ -79,12 +79,12 @@ function paintGrids() {
 }))};
 
 function changeGridSize (numGrids) {
-    let x = 352/numGrids - 2;
-    const grids = document.getElementsByClassName('divColumn');
-    for (i = 0; i < grids.length; i++) {
-        grids[i].style.height = (x);
-        grids[i].style.width = (x);
-    }
+    let x = 400/numGrids - 2;
+    const grids = document.querySelectorAll('.divColumn');
+    grids.forEach((grid) => {
+        grid.style.width = `${x}px`
+        grid.style.height = `${x}px`
+    })
 }
 
 const clearButton = document.querySelector('#btn');

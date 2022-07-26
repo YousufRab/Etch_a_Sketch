@@ -28,8 +28,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 352px;
-    max-height: 352px;
+    max-width: 400px;
+    max-height: 400px;
     align-self: center;
     min-width: 352px;
     min-height: 352px;
@@ -43,8 +43,8 @@ body {
 
 .divColumn {
     border: solid rgb(255, 18, 18) 1px;
-    height: 20px;
-    width: 20px;
+    height: 23px;
+    width: 23px;
     transition: 0.3s;
 }
 
@@ -55,7 +55,7 @@ body {
 .hoveredColumn {
     border: solid rgb(252, 113, 136) 1px;
     background-color: aqua;
-    height: 20px;
-    width: 20px;
+    height: 23px;
+    width: 23px;
     transition: 0.3s;
 }
