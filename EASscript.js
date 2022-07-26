@@ -2,17 +2,19 @@ const container = document.createElement('div');
 document.body.appendChild(container);
 container.classList.add('container');
 
-numGrids = userInput();
+// numGrids = userInput();
 
 function userInput() {
     removeGrid();
-    var numGrids = prompt("How many boxes would you like?: ");
+    var numGrids = prompt("Enter a number between 16 to 100: ");
     return numGrids;
 }
 
 function removeGrid() {
     const grids = document.querySelectorAll('.divColumn');
     grids.forEach((grid) => grid.remove());
+    const colorGrids = document.querySelectorAll('.hoveredColumn')
+    colorGrids.forEach((grid) => grid.remove());
 }
 
 function genGrid(numGrids) {
