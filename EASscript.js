@@ -18,8 +18,8 @@ function removeGrid() {
 }
 
 function genGrid(numGrids) {
-    if (numGrids > 100) {
-        alert("Sorry number of boxes can't be more than 100");
+    if (numGrids < 16 || numGrids > 100 || !Number.isInteger(numGrids)) {
+        alert("Must enter a number between 16-100");
     } else {
         for (i = 0; i < numGrids; i++) {
 
