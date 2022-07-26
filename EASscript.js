@@ -2,7 +2,6 @@ const container = document.createElement('div');
 document.body.appendChild(container);
 container.classList.add('container');
 
-// numGrids = userInput();
 
 function userInput() {
     var numGrids = parseInt(prompt("Enter a number between 16 to 100: "), 10);
@@ -12,6 +11,8 @@ function userInput() {
 function removeGrid() {
     const grids = document.querySelectorAll('.divColumn');
     grids.forEach((grid) => grid.remove());
+    const rows = document.querySelectorAll('.divRow');
+    rows.forEach((row) => row.remove());
     const colorGrids = document.querySelectorAll('.hoveredColumn')
     colorGrids.forEach((grid) => grid.remove());
 }
