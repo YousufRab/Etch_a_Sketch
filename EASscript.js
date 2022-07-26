@@ -6,7 +6,6 @@ container.classList.add('container');
 
 function userInput() {
     var numGrids = parseInt(prompt("Enter a number between 16 to 100: "), 10);
-    console.log(numGrids);
     return numGrids;
 }
 
@@ -71,11 +70,17 @@ grids.forEach((grid) => grid.addEventListener('mouseover', (event) => {
     changeClass(event.target.id);
 }));
 
+function paintGrids() {
+    const grids = document.querySelectorAll('.divColumn');
+    grids.forEach((grid) => grid.addEventListener('mouseover', (event) => {
+        changeClass(event.target.id);
+}))};
+
 const clearButton = document.querySelector('#btn');
 clearButton.addEventListener('click', () => {
     removeGrid();
-    userInput();
-    genGrid(userInput);
-
+    genGrid(userInput());
+    paintGrids();
 })
+
 
