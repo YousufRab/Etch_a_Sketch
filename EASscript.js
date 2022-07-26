@@ -2,6 +2,7 @@ const container = document.createElement('div');
 document.body.appendChild(container);
 container.classList.add('container');
 
+var numGrids = 0; 
 
 function userInput() {
     var numGrids = parseInt(prompt("Enter a number between 16 to 100: "), 10);
@@ -77,11 +78,22 @@ function paintGrids() {
         changeClass(event.target.id);
 }))};
 
+function changeGridSize (numGrids) {
+    let x = 352/numGrids - 2;
+    const grids = document.getElementsByClassName('divColumn');
+    for (i = 0; i < grids.length; i++) {
+        grids[i].style.height = (x);
+        grids[i].style.width = (x);
+    }
+}
+
 const clearButton = document.querySelector('#btn');
 clearButton.addEventListener('click', () => {
     removeGrid();
-    genGrid(userInput());
+    numGrids = userInput();
+    genGrid(numGrids);
+    changeGridSize(numGrids);
     paintGrids();
-})
+});
 
 
