@@ -80,6 +80,12 @@ function changeClass(elemId) {
     box.classList.add('hoveredColumn');
 }
 
+function changeClassRainBow(elemId) {
+    const box = document.getElementById(elemId);
+    box.classList.remove('divColumn');
+    box.classList.add('divColumnRainbow');
+}
+
 function paintGrids() {
     const grids = document.querySelectorAll('.divColumn');
     grids.forEach((grid) => grid.addEventListener('mouseover', (event) => {
@@ -87,11 +93,32 @@ function paintGrids() {
 }))};
 
 rainbow = () => {
-    var red = Math.floor(Math.random()*256);
-    var green = Math.floor(Math.random()*256);
-    var blue = Math.floor(Math.random()*256);
-    return "#" + red.toHex() + green.toHex() + blue.toHex();
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return '#' + randomColor;
 };
+
+console.log(rainbow());
+
+paintRainbow = () => {
+    let squares = Array.from(document.querySelectorAll('.divColumn'));
+    squares.forEach((square) => square.addEventListener('mouseover', (event) => {
+        if (!(square.classList.contains('hoveredColumn'))) {
+            changeClassRainBow(event.target.id);
+            square.style.backgroundColor = rainbow();
+        }
+    }));
+}
+
+
+
+rainButton = document.getElementById('rainbowBtn');
+rainButton.addEventListener('click', () => {
+    removeGrid();
+    numGrids = userInput();
+    genGrid(numGrids);
+    changeGridSize(numGrids);
+    paintRainbow();
+});
 
 function changeGridSize (numGrids) {
     let x = 400/numGrids - 2;
