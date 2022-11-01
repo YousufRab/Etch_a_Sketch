@@ -5,7 +5,7 @@ body {
     background-color: rgb(96, 38, 161);
 }
 
-#btn {
+#btn, .newGridBtn {
     align-self: center;
     margin-bottom: 30px;
     margin-top: 25px;
@@ -20,9 +20,9 @@ body {
     border-radius: 8px;
 }
 
-#btn:active {
+#btn:active, .newGridBtn:active {
     background-color: white;
-    color: rgb(96, 38, 161);
+    color: #2fccec
 }
 
 .container {
@@ -52,6 +52,14 @@ body {
     background-color: aqua;
 }
 
+
+.divColumnRainbow {
+    border: solid rgb(255, 18, 18) 1px;
+    height: 23px;
+    width: 23px;
+    transition: 0.3s;
+}
+
 .hoveredColumn {
     border: solid rgb(252, 113, 136) 1px;
     background-color: aqua;
@@ -59,3 +67,4 @@ body {
     width: 23px;
     transition: 0.3s;
 }
+
