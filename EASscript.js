@@ -86,6 +86,13 @@ function paintGrids() {
         changeClass(event.target.id);
 }))};
 
+rainbow = () => {
+    var red = Math.floor(Math.random()*256);
+    var green = Math.floor(Math.random()*256);
+    var blue = Math.floor(Math.random()*256);
+    return "#" + red.toHex() + green.toHex() + blue.toHex();
+};
+
 function changeGridSize (numGrids) {
     let x = 400/numGrids - 2;
     const grids = document.querySelectorAll('.divColumn');
