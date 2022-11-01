@@ -102,7 +102,7 @@ console.log(rainbow());
 paintRainbow = () => {
     let squares = Array.from(document.querySelectorAll('.divColumn'));
     squares.forEach((square) => square.addEventListener('mouseover', (event) => {
-        if (!(square.classList.contains('hoveredColumn'))) {
+        if (!(square.classList.contains('divColumnRainbow'))) {
             changeClassRainBow(event.target.id);
             square.style.backgroundColor = rainbow();
         }
