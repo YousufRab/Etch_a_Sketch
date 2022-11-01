@@ -25,6 +25,15 @@ body {
     color: #2fccec
 }
 
+.btnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#btn {
+    margin-right: 35px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
