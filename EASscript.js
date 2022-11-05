@@ -97,8 +97,6 @@ rainbow = () => {
     return '#' + randomColor;
 };
 
-console.log(rainbow());
-
 paintRainbow = () => {
     let squares = Array.from(document.querySelectorAll('.divColumn'));
     squares.forEach((square) => square.addEventListener('mouseover', (event) => {
